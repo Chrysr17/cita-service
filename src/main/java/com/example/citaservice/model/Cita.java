@@ -14,7 +14,13 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Cita {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cita")
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "id_paciente", nullable = false)
     private Paciente paciente;
 
     @ManyToOne
