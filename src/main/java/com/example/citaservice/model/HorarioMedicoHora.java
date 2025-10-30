@@ -2,6 +2,7 @@ package com.example.citaservice.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +14,7 @@ import org.springframework.data.annotation.Id;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@IdClass(HorarioMedicoHoraId.class)
 public class HorarioMedicoHora {
     @Id
     @Column(name = "id_horario")
